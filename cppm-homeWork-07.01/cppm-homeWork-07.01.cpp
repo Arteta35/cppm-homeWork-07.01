@@ -9,6 +9,7 @@ int addition(int a, int b) {
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
 
 #if MONE == 1
 
