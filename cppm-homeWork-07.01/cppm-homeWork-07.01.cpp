@@ -11,7 +11,11 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
 
-#if MONE == 1
+#if !defined(MONE)
+
+#error "Определите макрос MONE"
+
+#elif MONE == 1
 
     int a, b;
 
@@ -30,6 +34,7 @@ int main()
 #elif MONE == 0
 
     std::cout << "Работаю в режиме тренировки\n";
+
 
 #else
 
